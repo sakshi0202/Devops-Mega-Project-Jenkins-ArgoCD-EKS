@@ -32,7 +32,7 @@ pipeline {
         stage('Git: Code Checkout') {
             steps {
                 script{
-                    code_checkout("https://github.com/NotHarshhaa/DevOps-Projects/DevOps-Project-40/Devops-Mega-Project-Jenkins-ArgoCD-EKS","master")
+                    code_checkout("https://github.com/sakshi0202/Devops-Mega-Project-Jenkins-ArgoCD-EKS","main")
                 }
             }
         }
@@ -110,8 +110,8 @@ pipeline {
         stage("Docker: Push to DockerHub"){
             steps{
                 script{
-                    docker_push("wanderlust-backend-beta","${params.BACKEND_DOCKER_TAG}","thatgeekcontainer") 
-                    docker_push("wanderlust-frontend-beta","${params.FRONTEND_DOCKER_TAG}","thatgeekcontainer")
+                    docker_push("wanderlust-backend-beta","${params.BACKEND_DOCKER_TAG}","sakshimhaske942") 
+                    docker_push("wanderlust-frontend-beta","${params.FRONTEND_DOCKER_TAG}","sakshimhaske942")
                 }
             }
         }
